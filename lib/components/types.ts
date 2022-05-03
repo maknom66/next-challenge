@@ -1,8 +1,8 @@
 import {
   SanityImageObject,
   SanityImageSource,
-} from '@sanity/image-url/lib/types/types';
-import { Dictionary } from 'lodash';
+} from "@sanity/image-url/lib/types/types";
+import { Dictionary } from "lodash";
 
 export type TSlug = string;
 
@@ -27,12 +27,12 @@ export type Fact = {
   tags: Tag[];
 } & (
   | {
-      type: 'quote';
+      type: "quote";
       context: string;
       quote: string;
     }
   | {
-      type: 'fact';
+      type: "fact";
       content: string;
     }
 );

@@ -1,10 +1,10 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 export const AppBar = () => {
   return (
-    <nav style={{ backgroundColor: '#F9EBEA' }}>
+    <nav className="flex justify-center p-6 bg-slate-50">
       <section>
         <div>
           <Link passHref href="/">
@@ -22,8 +22,13 @@ export const AppBar = () => {
 
         <div>
           {/* Search input */}
-          <div>
-            <input placeholder="Search for a celebrity" type="search" />
+          <div className="flex flex-row items-center justify-between p-2 mt-2 bg-white rounded-lg">
+            <input
+              type="text"
+              className="focus:outline-none"
+              placeholder="Search for a celebrity"
+            />
+            <i className="ri-search-line text-gray-400 text-lg"></i>
           </div>
         </div>
       </section>
