@@ -1,6 +1,6 @@
-import React from 'react';
-import { useCelebContext } from '~/lib/components/StaticPropsContextProvider';
-import { Fact } from '~/lib/celeb/Facts/Fact';
+import React from "react";
+import { useCelebContext } from "~/lib/components/StaticPropsContextProvider";
+import { Fact } from "~/lib/celeb/Facts/Fact";
 
 export const Facts = () => {
   const context = useCelebContext();
@@ -12,11 +12,8 @@ export const Facts = () => {
         const factGroup = groups[topic];
 
         return (
-          <div
-            key={`${topic}-${i}`}
-            style={{ backgroundColor: '#F4ECF7', marginTop: 20 }}
-          >
-            <div>{topic}</div>
+          <div key={`${topic}-${i}`} className="mt-12">
+            <div className="text-2xl font-bold">{topic}</div>
 
             {factGroup.map((fact, innerI) => {
               return (
